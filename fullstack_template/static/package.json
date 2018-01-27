@@ -1,0 +1,22 @@
+{
+  "name": "gaggle",
+  "version": "1.0.0",
+  "description": "Find study buddies!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karentu/gaggle.git"
+  },
+  "keywords": [
+    "study"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karentu/gaggle/issues"
+  },
+  "homepage": "https://github.com/karentu/gaggle#readme"
+}
