@@ -19,7 +19,7 @@ class Form extends React.Component {
 		this.setState({name: event.target.value});
 	}
 
-	handlechangeCourse(event) {
+	handleChangeCourse(event) {
 		this.setState({course: event.target.value});
 	}
 
@@ -39,7 +39,7 @@ class Form extends React.Component {
 		      success: (data) => {
 		        this.setState({message: data});
 		        if ((this.state.message === "")) { // send empty message if fine
-		            window.location="submit";
+		            window.location="home";
 		        };
 		      },
 		      error: (data) => {
