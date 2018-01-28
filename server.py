@@ -8,7 +8,7 @@ import re, sqlite3, traceback
 app = Flask(__name__, static_folder="fullstack_template/static/dist", \
 	template_folder="fullstack_template/static")
 
-sortedBuddies = {}
+sortedBuddies = []
 
 @app.route("/")
 def index():
@@ -19,8 +19,6 @@ def home(username=None, course=None, data=sortedBuddies):
 	global sortedBuddies
 	return render_template("home.html", username=username, course=course, data=sortedBuddies)
 
-# need to put username and course into a database
-
 @app.route("/_info", methods=['GET', 'POST'])
 def driver():
 	content = request.get_json()
@@ -30,11 +28,12 @@ def driver():
 		return 'ERROR'
 
 	course = course.group()
+	num = content['number']
 
 	lat = float(content['latitude'])
 	lon = float(content['longitude'])
 
-	buddies = sequel(username, course, lat, lon) # all users with same course
+	buddies = sequel(username, course, num, lat, lon) # all users with same course
 	global sortedBuddies
 	sortedBuddies = sortUsersByDistance(lat, lon, buddies)
 
@@ -42,19 +41,19 @@ def driver():
 
 
 
-def sequel(username, course, lat, lon):
+def sequel(username, course, num, lat, lon):
 	try:
 		with sqlite3.connect("database.db") as con:
 			cur = con.cursor()
-			cur.execute("INSERT INTO users (username, course, lat, lon) VALUES (?, ?, ?, ?)",
-			 (username, course, lat, lon))
+			cur.execute("INSERT INTO users (username, course, num, lat, lon) VALUES (?, ?, ?, ?, ?)",
+			 (username, course, num, lat, lon))
 			con.commit()
 			print("User successfully added")
 	except Exception as e:
 		# not really updating?
 		if e == "UNIQUE constraint failed: user.username":
-			cur.execute("UPDATE users SET course = ?, lat = ?, lon = ? WHERE username = ?",
-			 (course, lat, lon, username))
+			cur.execute("UPDATE users SET course = ?, num = ?, lat = ?, lon = ? WHERE username = ?",
+			 (course, num, lat, lon, username))
 		con.rollback()
 		print(e)
 	finally:
@@ -80,16 +79,23 @@ def sequel(username, course, lat, lon):
 def sortUsersByDistance(lat, lon, usersArray):
 	users = [] # list of (user, distance)
 	myOrigin = (lat, lon)
-	for u in usersArray: # (user, course, lat, lon)
-		destin = (u[2], u[3])
+	for u in usersArray: # (user, course, num, lat, lon)
+		destin = (u[3], u[4])
 		(distance, val) = findDistance(myOrigin, destin)
-		users.append((u[0], distance, val))
+		users.append((u[0], distance, val, u[2]))
 
 	users = sorted(users, key=lambda x: x[2])
 
-	data = {}
+	data = []
 	for x in users:
-		data[x[0]] = x[1]
+		dictionary = {}
+		dictionary['name'] = x[0]
+		dictionary['distance'] = x[1]
+		dictionary['number'] = x[3]
+		data.append(dictionary)
+
+	print(data)
+
 
 	return data
 
@@ -112,7 +118,7 @@ def findDistance(origin, destination):
 @app.before_first_request
 def make_db():
 	conn = sqlite3.connect('database.db')
-	conn.execute('CREATE TABLE IF NOT EXISTS users (username TEXT, course TEXT, lat DECIMAL, lon DECIMAL)')
+	conn.execute('CREATE TABLE IF NOT EXISTS users (username TEXT, course TEXT, num TEXT, lat DECIMAL, lon DECIMAL)')
 	print("Table created.")
 	conn.close()
 

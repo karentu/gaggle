@@ -5,7 +5,7 @@ body {
 .header {
 	display: flex;
 	align-items: center;
-	height: 65%;
+	height: 60%;
 }
 
 .logo {
@@ -33,6 +33,7 @@ p {
 	border-bottom-style: solid;
 	border-color: #FFD301;
 	width: 300px;
+	margin: -5px auto;
 }
 
 .button {

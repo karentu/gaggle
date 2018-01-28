@@ -8,11 +8,13 @@ class Form extends React.Component {
 		this.state = {
 			name: '',
 			course: '',
+			number: '',
 			latitude: 0,
 			longitude: 0};
 
 		this.handleChangeName = this.handleChangeName.bind(this);
 		this.handleChangeCourse = this.handleChangeCourse.bind(this);
+		this.handleChangeNumber = this.handleChangeNumber.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChangeLatLong = this.handleChangeLatLong.bind(this);
 	}
@@ -23,6 +25,10 @@ class Form extends React.Component {
 
 	handleChangeCourse(event) {
 		this.setState({course: event.target.value});
+	}
+
+	handleChangeNumber(event) {
+		this.setState({number: event.target.value});
 	}
 
 	handleSubmit(event) {
@@ -36,6 +42,7 @@ class Form extends React.Component {
 		var data = {
 			name: this.state.name,
 			course: this.state.course,
+			number: this.state.number,
 			latitude: this.state.latitude,
 			longitude: this.state.longitude
 		};
@@ -67,6 +74,12 @@ class Form extends React.Component {
 				<input type="text" value={this.state.name}
 				onChange={this.handleChangeName} className="inputBox" />
 				<br />
+
+				<p>What's your number?</p>
+				<input type="text" value={this.state.number}
+				onChange={this.handleChangeNumber} className="inputBox" />
+				<br />
+
 
 				<p>What are you studying?</p>
 				<input type="text" value={this.state.course}
