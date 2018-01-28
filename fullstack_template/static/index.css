@@ -1,6 +1,44 @@
-h1 {
-	font-family: 'Roboto', sans-serif;
-	letter-spacing: -5px;
-	font-size: 80px;
-	text-align: center;
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	height: 65%;
+}
+
+.logo {
+	display: block;
+	margin: auto;
+	height: 300px;
+	align-self: flex-end;
+
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+p {
+	font-weight: bold;
+}
+
+.inputBox {
+	background-color: #F0F0F0;
+	border-style: none;
+	border-bottom-style: solid;
+	border-color: #FFD301;
+	width: 300px;
+}
+
+.button {
+	color: #FFD301;
+	padding-top: 0;
+	font-size: 40px;
+	height: 50px;
+	background: none;
+	border-style: none;
 }

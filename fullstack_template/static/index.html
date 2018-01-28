@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <!-- Latest compiled and minified bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <title>Gaggle</title>
   </head>
   <body>
     <div id="content" />
+    <script type="text/javascript">
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+      console.log($SCRIPT_ROOT);
+    </script>
     <script src="/dist/index.bundle.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript">
-      $SCRIPT_ROOT = {{request.script_root|tojson|safe}};
-    </script>
   </body>
 </html>

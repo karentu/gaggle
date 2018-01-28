@@ -19,27 +19,30 @@ def home(username=None, course=None):
 @app.route("/_info", methods=['GET', 'POST'])
 def driver():
 	content = request.get_json()
-	print(content)
 	username = content['name']
 	course = re.fullmatch('([A-Z]){4}([0-9]){4}([A-Z])?', content['course'])
 	if not course or not username:
 		return 'ERROR'
-	# lat = float(content['latitude'])
-	# lon = float(content['longitude'])
 
-	with sql.connect("database.db") as con:
-		cur = con.cursor()
-		cur.execute("INSERT INTO users (username, course, lat, lon) VALUES (?, ?, ?, ?)", (username, course, lat, lon))
-		con.commit()
-		print("User successfully added")
-	# except:
-	# 	con.rollback()
-	# 	print("Error in insert operation")
+	course = course.group()
 
-	# finally:
-	con.close() 
+	lat = float(content['latitude'])
+	lon = float(content['longitude'])
 
-	return name + "," + course.group()
+	try:
+		with sqlite3.connect("database.db") as con:
+			cur = con.cursor()
+			cur.execute("INSERT INTO users (username, course, lat, lon) VALUES (?, ?, ?, ?)", (username, course, lat, lon))
+			con.commit()
+			print("User successfully added")
+	except:
+		con.rollback()
+		print("Error in insert operation")
+
+	finally:
+		con.close() 
+
+	return username + "," + course
 
 @app.before_first_request
 def make_db():
