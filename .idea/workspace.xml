@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="" />
+    <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/home.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/index.bundle.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/js/HomePage.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/js/home.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/bundle.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/home.html" afterPath="$PROJECT_DIR$/fullstack_template/static/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/index.html" afterPath="$PROJECT_DIR$/fullstack_template/static/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/webpack.config.js" afterPath="$PROJECT_DIR$/fullstack_template/static/webpack.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,12 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-              <folding />
+            <state relative-caret-position="465">
+              <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+              <folding>
+                <element signature="e#12#61#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -25,17 +40,17 @@
         <entry file="file://$PROJECT_DIR$/fullstack_template/static/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fullstack_template/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,6 +64,12 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>&gt;&gt;&gt;</find>
+      <find>&gt;&gt;&gt;&gt;&gt;</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -64,8 +85,8 @@
         <option value="$PROJECT_DIR$/fullstack_template/static/webpack.config.js" />
         <option value="$PROJECT_DIR$/fullstack_template/static/js/index.jsx" />
         <option value="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" />
-        <option value="$PROJECT_DIR$/server.py" />
         <option value="$PROJECT_DIR$/fullstack_template/static/index.html" />
+        <option value="$PROJECT_DIR$/server.py" />
       </list>
     </option>
   </component>
@@ -107,6 +128,13 @@
               <item name="gaggle" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack_template" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gaggle" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gaggle" type="462c0819:PsiDirectoryNode" />
+              <item name="fullstack_template" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gaggle" type="b2602c69:ProjectViewProjectNode" />
@@ -251,7 +279,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -267,7 +297,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -275,19 +307,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#12#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fullstack_template/server/python.py" />
     <entry file="file://$PROJECT_DIR$/fullstack_template/static/js/App.js" />
-    <entry file="file://$PROJECT_DIR$/fullstack_template/static/dist/bundle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1164">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack_template/static/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -312,18 +339,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fullstack_template/static/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -339,8 +358,26 @@
     <entry file="file://$PROJECT_DIR$/fullstack_template/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fullstack_template/static/dist/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1821">
+          <caret line="418" column="5" lean-forward="false" selection-start-line="418" selection-start-column="0" selection-end-line="418" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding>
+            <element signature="e#12#61#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -41,20 +41,21 @@ class Form extends React.Component {
 			long: this.state.longitude
 		};
 		$.ajax({
-					type:"POST",
-					url:$SCRIPT_ROOT + "/_info",
-					data: JSON.stringify(data),
-					contentType: 'application/json',
-					success: (data) => {
-						this.setState({message: data});
-						if ((this.state.message === "")) { // send empty message if fine
-								window.location="home";
-						};
-					},
-					error: (data) => {
-						this.setState({message: data});
-					}
-				});
+		      type:"POST",
+		      url:$SCRIPT_ROOT + "/_info",
+		      data: JSON.stringify(data),
+		      contentType: 'application/json',
+		      success: (data) => {
+		        if ((data !== "ERROR")) {
+		        	var info = data.split(",");
+		        	window.location.assign("home/" + info[0] + "+" + info[1]);
+		        } else {
+		        	alert("Please enter a course code in the following format: AAAA0000."); // change later
+		        };
+		      },
+		      error: (data) => {
+		      }
+		    });
 	}
 
 
