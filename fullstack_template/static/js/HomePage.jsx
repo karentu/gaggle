@@ -26,22 +26,6 @@ class HomePage extends React.Component {
         });
 
         return final;
-
-
-        // var str = this.props.data.replace(/&#39;/g, "\"");
-        // var data = JSON.parse(str);
-        
-        // var builder = [];
-        // for (var key in data) {
-        //     var user = [key, data[key]];
-        //     builder.push(user);
-        // }
-
-        // const final = builder.map(item => {
-        //     return <User username={item[0]} distance={item[1]} />
-        // });
-
-        // return final;
     }
 
 

@@ -81,6 +81,7 @@ def sortUsersByDistance(lat, lon, usersArray):
 	myOrigin = (lat, lon)
 	for u in usersArray: # (user, course, num, lat, lon)
 		destin = (u[3], u[4])
+		print(destin)
 		(distance, val) = findDistance(myOrigin, destin)
 		users.add((u[0], distance, val, u[2]))
 
@@ -93,9 +94,6 @@ def sortUsersByDistance(lat, lon, usersArray):
 		dictionary['distance'] = x[1]
 		dictionary['number'] = x[3]
 		data.append(dictionary)
-
-	print(data)
-
 
 	return data
 
