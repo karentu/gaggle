@@ -1,3 +1,5 @@
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+
 module.exports = {
   entry: {
     index: __dirname + '/js/index.jsx',
@@ -8,18 +10,29 @@ module.exports = {
     filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: [".js", ".jsx", ".css"]
+    extensions: [".js", ".jsx"]
   },
+  plugins: [
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development, 
+      // ./public directory is being served 
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['.'] }
+    })
+  ],
   module: {
-    loaders: [
-      {
+    rules: [{
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react']
         }
-      }
-    ]
+      },
+      {
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+    }]
   }
 };

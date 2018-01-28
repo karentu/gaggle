@@ -6,7 +6,7 @@ class App extends React.Component {
     return (
     	<div>
     		<div className='header'>
-    			<h1>Gaggle</h1>
+                <img src="../images/gooselogo.png" className='logo' />
     		</div>
     		<Form />
     	</div>

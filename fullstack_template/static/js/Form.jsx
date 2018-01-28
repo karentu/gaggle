@@ -26,7 +26,6 @@ class Form extends React.Component {
 	}
 
 	handleSubmit(event) {
-		console.log("Submit button pressed!")
 		event.preventDefault();
 		navigator.geolocation.getCurrentPosition(this.handleChangeLatLong);
 	}
@@ -38,8 +37,9 @@ class Form extends React.Component {
 			name: this.state.name,
 			course: this.state.course,
 			latitude: this.state.latitude,
-			long: this.state.longitude
+			longitude: this.state.longitude
 		};
+
 		$.ajax({
 		      type:"POST",
 		      url:$SCRIPT_ROOT + "/_info",
@@ -61,19 +61,19 @@ class Form extends React.Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form onSubmit={this.handleSubmit} className="form">
 
 				<p>What's your name?</p>
 				<input type="text" value={this.state.name}
-				onChange={this.handleChangeName} />
+				onChange={this.handleChangeName} className="inputBox" />
 				<br />
 
 				<p>What are you studying?</p>
 				<input type="text" value={this.state.course}
-				onChange={this.handleChangeCourse} />
+				onChange={this.handleChangeCourse} className="inputBox" />
 				<br />
 
-				<input className="button" type="submit" value="Submit"/>
+				<input className="button" type="submit" value="&#8594;" className="button" />
 
 			</form>
 

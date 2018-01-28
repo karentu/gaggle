@@ -2,7 +2,8 @@
 from flask import Flask, render_template, request
 import requests
 
-MAPS_API_KEY = 'AIzaSyDWrVe0DPmRHlmCUjIf1gQ_Dkij-FQV4Hk'
+MAPS_API_KEY = 'AIzaSyDWrVe0DPmRHlmCUjIf1gQ_Dkij-FQV4Hk' 
+import re, sqlite3, traceback
 
 app = Flask(__name__, static_folder="fullstack_template/static/dist", \
 	template_folder="fullstack_template/static")
@@ -17,18 +18,54 @@ def home(username=None, course=None):
 
 # need to put username and course into a database
 
-
 @app.route("/_info", methods=['GET', 'POST'])
 def driver():
 	content = request.get_json()
-	name = content['name']
+	username = content['name']
 	course = re.fullmatch('([A-Z]){4}([0-9]){4}([A-Z])?', content['course'])
-	if not course or not name:
+	if not course or not username:
 		return 'ERROR'
 
-	print(name, course.group())
-	return name + "," + course.group()
+	course = course.group()
 
+	lat = float(content['latitude'])
+	lon = float(content['longitude'])
+
+	try:
+		with sqlite3.connect("database.db") as con:
+			cur = con.cursor()
+			cur.execute("INSERT INTO users (username, course, lat, lon) VALUES (?, ?, ?, ?)",
+			 (username, course, lat, lon))
+			con.commit()
+			print("User successfully added")
+	except Exception as e:
+		if e == "UNIQUE constraint failed: user.username":
+			cur.execute("UPDATE users SET course = ?, lat = ?, lon = ? WHERE username = ?",
+			 (course, lat, lon, username))
+		con.rollback()
+		print(e)
+
+	finally:
+		con.close()
+
+	try:
+		with sqlite3.connect("database.db") as con:
+			cur = con.cursor()			
+			cur.execute("SELECT * FROM users WHERE course = ? AND username != ?", 
+				(course, username))
+			rows = cur.fetchall()
+
+	except Exception as e:
+		con.rollback()
+		print(e)
+	finally:
+		con.close()
+
+
+
+	return username + "," + course
+
+<<<<<<< HEAD
 def findDistance(origin, destination):
 	to_return = []
 	url = ('https://maps.googleapis.com/maps/api/distancematrix/json?origin=' + str(origin[0]) + ',' + str(origin[1])
@@ -45,6 +82,14 @@ def findDistance(origin, destination):
 		print(response)
 		return -1
 
+=======
+@app.before_first_request
+def make_db():
+	conn = sqlite3.connect('database.db')
+	conn.execute('CREATE TABLE IF NOT EXISTS users (username TEXT, course TEXT, lat DECIMAL, lon DECIMAL)')
+	conn.close()
+>>>>>>> d285a51b4c314927c1c96f0aa6b9178692a731e2
 
 if __name__ == "__main__":
-    app.run()
+	make_db()
+	app.run(debug=True)
