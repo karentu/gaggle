@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request
 import requests
 
-MAPS_API_KEY = 'AIzaSyDWrVe0DPmRHlmCUjIf1gQ_Dkij-FQV4Hk' 
+MAPS_API_KEY = 'AIzaSyDWrVe0DPmRHlmCUjIf1gQ_Dkij-FQV4Hk'
 import re, sqlite3, traceback
 
 app = Flask(__name__, static_folder="fullstack_template/static/dist", \
@@ -65,7 +65,7 @@ def driver():
 
 	return username + "," + course
 
-<<<<<<< HEAD
+
 def findDistance(origin, destination):
 	to_return = []
 	url = ('https://maps.googleapis.com/maps/api/distancematrix/json?origin=' + str(origin[0]) + ',' + str(origin[1])
@@ -82,13 +82,11 @@ def findDistance(origin, destination):
 		print(response)
 		return -1
 
-=======
 @app.before_first_request
 def make_db():
 	conn = sqlite3.connect('database.db')
 	conn.execute('CREATE TABLE IF NOT EXISTS users (username TEXT, course TEXT, lat DECIMAL, lon DECIMAL)')
 	conn.close()
->>>>>>> d285a51b4c314927c1c96f0aa6b9178692a731e2
 
 if __name__ == "__main__":
 	make_db()

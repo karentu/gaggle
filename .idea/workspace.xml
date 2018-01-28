@@ -17,8 +17,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+            <state relative-caret-position="-50">
+              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
                 <element signature="e#12#61#0" expanded="true" />
               </folding>
@@ -31,7 +31,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
               <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding />
+              <folding>
+                <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +42,11 @@
         <entry file="file://$PROJECT_DIR$/fullstack_template/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <marker date="1517118763000" expanded="true" signature="658:666" ph="..." />
+                <marker date="1517118763000" expanded="true" signature="658:676" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -273,7 +278,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
+          <folding>
+            <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -327,7 +334,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding />
+          <folding>
+            <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -342,8 +351,11 @@
     <entry file="file://$PROJECT_DIR$/fullstack_template/static/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1517118763000" expanded="true" signature="658:666" ph="..." />
+            <marker date="1517118763000" expanded="true" signature="658:676" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -365,8 +377,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
+        <state relative-caret-position="-50">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
             <element signature="e#12#61#0" expanded="true" />
           </folding>
