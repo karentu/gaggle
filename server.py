@@ -19,7 +19,6 @@ def driver():
 	content = request.get_json()
 	print(content)
 	return 'OK'
-	# content = request.get_json()
 
 
 if __name__ == "__main__":
