@@ -37,6 +37,7 @@ def driver():
 			con.commit()
 			print("User successfully added")
 	except Exception as e:
+		# not really updating?
 		if e == "UNIQUE constraint failed: user.username":
 			cur.execute("UPDATE users SET course = ?, lat = ?, lon = ? WHERE username = ?",
 			 (course, lat, lon, username))
@@ -58,6 +59,7 @@ def driver():
 		print(e)
 	finally:
 		con.close()
+
 
 
 

@@ -1,0 +1,22 @@
+body {
+	background-image: url("./images/backgroundgaggle.png");
+	font-family: 'Open Sans', sans-serif;
+}
+
+.page {
+	display: grid;
+	grid-template-columns: 200px auto;
+}
+
+.me {
+	display: flex;
+	flex-direction: column;
+	grid-column: 1;
+	background-color: #545454;
+	color: white;
+}
+
+.list {
+	grid-column: 2;
+	padding-top: 20px;
+}
