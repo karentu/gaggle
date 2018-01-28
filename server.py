@@ -1,6 +1,8 @@
 # server.py
 from flask import Flask, render_template, request
+import requests
 
+MAPS_API_KEY = 'AIzaSyDWrVe0DPmRHlmCUjIf1gQ_Dkij-FQV4Hk'
 import re, sqlite3, traceback
 
 app = Flask(__name__, static_folder="fullstack_template/static/dist", \
@@ -64,6 +66,23 @@ def driver():
 
 
 	return username + "," + course
+
+
+def findDistance(origin, destination):
+	to_return = []
+	url = ('https://maps.googleapis.com/maps/api/distancematrix/json?origin=' + str(origin[0]) + ',' + str(origin[1])
+		+ '&destinations=' + str(destination[0]) + ',' + str(destination[1])
+		+ '&mode=walking'
+		+ '&key=' + MAPS_API_KEY)
+
+	response = requests.get(url)
+	parsed_json = json.loads(response.content)
+	if parsed_json['status'] == 'OK':
+		distance = parsed_json['rows']['elements']['duration']['text']
+		return distance
+	else:
+		print(response)
+		return -1
 
 @app.before_first_request
 def make_db():
