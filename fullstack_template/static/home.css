@@ -13,7 +13,7 @@ p {
 
 .page {
 	display: grid;
-	grid-template-columns: 180px auto;
+	grid-template-columns: 200px auto;
 }
 
 .me {
@@ -25,6 +25,7 @@ p {
 	min-height: 100vh;
 	align-items: center;
 	padding-top: 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .profile {
@@ -51,6 +52,8 @@ p {
 	align-items: center;
 	justify-content: center;
 	margin: 20px 20px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .userProfile {
