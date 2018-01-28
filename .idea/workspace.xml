@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/home.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/index.bundle.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/js/HomePage.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fullstack_template/static/js/home.jsx" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/bundle.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/home.bundle.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/index.bundle.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/home.html" afterPath="$PROJECT_DIR$/fullstack_template/static/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/index.html" afterPath="$PROJECT_DIR$/fullstack_template/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/webpack.config.js" afterPath="$PROJECT_DIR$/fullstack_template/static/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="server.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
@@ -32,6 +24,16 @@
               <folding>
                 <element signature="e#12#61#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,6 +89,7 @@
         <option value="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" />
         <option value="$PROJECT_DIR$/fullstack_template/static/index.html" />
         <option value="$PROJECT_DIR$/server.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -128,13 +131,6 @@
               <item name="gaggle" type="462c0819:PsiDirectoryNode" />
               <item name="fullstack_template" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gaggle" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gaggle" type="462c0819:PsiDirectoryNode" />
-              <item name="fullstack_template" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gaggle" type="b2602c69:ProjectViewProjectNode" />
@@ -378,6 +374,14 @@
           <folding>
             <element signature="e#12#61#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
