@@ -6,7 +6,7 @@ class App extends React.Component {
     return (
     	<div>
     		<div className='header'>
-                <img src="images/gooselogo.png" className='logo' />
+                <img src="gooselogo.png" className='logo' />
     		</div>
     		<Form />
     	</div>
