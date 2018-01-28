@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/home.bundle.js" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/home.bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/home.css" afterPath="$PROJECT_DIR$/fullstack_template/static/home.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/home.html" afterPath="$PROJECT_DIR$/fullstack_template/static/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/index.css" afterPath="$PROJECT_DIR$/fullstack_template/static/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/App.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/HomePage.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/HomePage.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/User.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/User.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +25,8 @@
       <file leaf-file-name="server.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="-200">
+              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
               <folding>
                 <element signature="e#12#61#0" expanded="true" />
               </folding>
@@ -32,7 +40,7 @@
             <state relative-caret-position="300">
               <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
               <folding>
-                <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+                <marker date="1517124586000" expanded="true" signature="866:1406" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -279,7 +287,7 @@
         <state relative-caret-position="45">
           <caret line="3" column="16" lean-forward="true" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
           <folding>
-            <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+            <marker date="1517124586000" expanded="true" signature="866:1406" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -335,7 +343,7 @@
         <state relative-caret-position="300">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <marker date="1517118763000" expanded="true" signature="866:1349" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
+            <marker date="1517124586000" expanded="true" signature="866:1406" ph="{&quot;babel&quot;: &quot;^6.23.0&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -377,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="-200">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
           <folding>
             <element signature="e#12#61#0" expanded="true" />
           </folding>
