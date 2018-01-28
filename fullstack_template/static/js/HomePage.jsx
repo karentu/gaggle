@@ -7,6 +7,7 @@ class HomePage extends React.Component {
         this.state = {
             username: this.props.username,
             course: this.props.course,
+            data: this.props.data,
             profile: "",
             profilepics: ["images/Goose1.png", "images/Goose2.png", 
                 "images/Goose3.png", "images/Goose4.png"]
@@ -20,6 +21,7 @@ class HomePage extends React.Component {
 
 
 	render () {
+        console.log(data);
         return (
         <div className="page">
             <div className="me">
