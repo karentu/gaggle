@@ -8,14 +8,15 @@ import re, sqlite3, traceback
 app = Flask(__name__, static_folder="fullstack_template/static/dist", \
 	template_folder="fullstack_template/static")
 
-sortedBuddies = []
+sortedBuddies = {}
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+	return render_template("index.html")
 
 @app.route("/home/<username>+<course>")
-def home(username=None, course=None):
+def home(username=None, course=None, data=sortedBuddies):
+	global sortedBuddies
 	return render_template("home.html", username=username, course=course, data=sortedBuddies)
 
 # need to put username and course into a database
@@ -34,8 +35,8 @@ def driver():
 	lon = float(content['longitude'])
 
 	buddies = sequel(username, course, lat, lon) # all users with same course
+	global sortedBuddies
 	sortedBuddies = sortUsersByDistance(lat, lon, buddies)
-	print(sortedBuddies)
 
 	return username + "," + course
 
@@ -83,11 +84,14 @@ def sortUsersByDistance(lat, lon, usersArray):
 		destin = (u[2], u[3])
 		(distance, val) = findDistance(myOrigin, destin)
 		users.append((u[0], distance, val))
-	print(users)
 
 	users = sorted(users, key=lambda x: x[2])
-	print(users)
-	return users
+
+	data = {}
+	for x in users:
+		data[x[0]] = x[1]
+
+	return data
 
 
 def findDistance(origin, destination):
@@ -109,6 +113,7 @@ def findDistance(origin, destination):
 def make_db():
 	conn = sqlite3.connect('database.db')
 	conn.execute('CREATE TABLE IF NOT EXISTS users (username TEXT, course TEXT, lat DECIMAL, lon DECIMAL)')
+	print("Table created.")
 	conn.close()
 
 if __name__ == "__main__":
