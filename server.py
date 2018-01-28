@@ -77,12 +77,12 @@ def sequel(username, course, num, lat, lon):
 
 
 def sortUsersByDistance(lat, lon, usersArray):
-	users = [] # list of (user, distance)
+	users = set() # list of (user, distance)
 	myOrigin = (lat, lon)
 	for u in usersArray: # (user, course, num, lat, lon)
 		destin = (u[3], u[4])
 		(distance, val) = findDistance(myOrigin, destin)
-		users.append((u[0], distance, val, u[2]))
+		users.add((u[0], distance, val, u[2]))
 
 	users = sorted(users, key=lambda x: x[2])
 
