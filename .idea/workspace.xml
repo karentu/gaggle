@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/dist/bundle.js" afterPath="$PROJECT_DIR$/fullstack_template/static/dist/bundle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/index.html" afterPath="$PROJECT_DIR$/fullstack_template/static/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" afterPath="$PROJECT_DIR$/fullstack_template/static/js/Form.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.py" afterPath="$PROJECT_DIR$/server.py" />
-    </list>
+    <list default="true" id="9977a5ce-f83e-4230-8a9e-a5e33a793a4e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
